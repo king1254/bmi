@@ -15,31 +15,52 @@ class _BmiScreenState extends State<BmiScreen> {
       body: Column(
         children: [
           Expanded(
-            child:Container(
-            width: double.infinity,
-            color: Colors.red,
-          )
+            child: Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      10.0,
+                    ),
+                    color: Colors.grey,
+                  ),
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.ac_unit,
+                        size: 70.0,
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        'male',
+                        style: TextStyle(fontSize: 25.0),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-               Expanded(
-            child:Container(
+          Expanded(
+              child: Container(
             width: double.infinity,
             color: Colors.green,
-          )
-          ),
-               Expanded(
-            child:Container(
+          )),
+          Expanded(
+              child: Container(
             width: double.infinity,
             color: Colors.yellow,
-          )
-               ),
-
-              Container(
-                width:double.infinity,
-                color: Colors.red,
-                child: MaterialButton(
-                 onPressed: (){},
-                 child: Text("text me"),
-                 ),), 
+          )),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            child: MaterialButton(
+              onPressed: () {},
+              child: Text("text me"),
+            ),
+          ),
         ],
       ),
     );
