@@ -17,37 +17,76 @@ class _BmiScreenState extends State<BmiScreen> {
           Expanded(
             child: Row(
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      10.0,
+                
+            Expanded(
+              child:Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        10.0,
+                      ),
+                      color: Colors.grey,
                     ),
-                    color: Colors.grey,
+                    child: Column(
+                        mainAxisAlignment : MainAxisAlignment.center,
+
+                      children: [
+                        Icon(
+                          Icons.ac_unit,
+                          size: 70.0,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          'male',
+                          style: TextStyle(fontSize: 25.0),
+                        )
+                      ],
+                    ),
                   ),
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.ac_unit,
-                        size: 70.0,
+                ),),
+                  Expanded(child:Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        10.0,
                       ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      Text(
-                        'male',
-                        style: TextStyle(fontSize: 25.0),
-                      )
-                    ],
+                      color: Colors.grey,
+                    ),
+                    child: Column(
+                        mainAxisAlignment : MainAxisAlignment.center,
+
+                      children: [
+                        Icon(
+                          Icons.ac_unit,
+                          size: 70.0,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          'male',
+                          style: TextStyle(fontSize: 25.0),
+                        )
+                      ],
+                    ),
                   ),
-                ),
+                ),),
               ],
             ),
           ),
+
+
+          ///////////////////////////////////
           Expanded(
               child: Container(
             width: double.infinity,
             color: Colors.green,
           )),
+          //////////////////////////////////
           Expanded(
               child: Container(
             width: double.infinity,
