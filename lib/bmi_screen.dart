@@ -31,15 +31,18 @@ class _BmiScreenState extends State<BmiScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.ac_unit,
-                              size: 70.0,
+                      
+
+                               Image(
+                              image: AssetImage('assets/images/female.png'),
+                              height: 90.0,
+                              width: 90.0,
                             ),
                             SizedBox(
                               height: 15.0,
                             ),
                             Text(
-                              'male',
+                              'أنثى',
                               style: TextStyle(fontSize: 25.0),
                             )
                           ],
@@ -61,15 +64,16 @@ class _BmiScreenState extends State<BmiScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.ac_unit,
-                            size: 70.0,
-                          ),
+                          Image(
+                              image: AssetImage('assets/images/male.png'),
+                              height: 90.0,
+                              width: 90.0,
+                            ),
                           SizedBox(
                             height: 15.0,
                           ),
                           Text(
-                            'male',
+                            'ذكر',
                             style: TextStyle(fontSize: 25.0),
                           )
                         ],
@@ -89,40 +93,166 @@ class _BmiScreenState extends State<BmiScreen> {
           ///
 
           Expanded(
-            child: Column(
-              children: [
-                Text(
-                  'ارتفاع',
-                  style: TextStyle(fontSize: 25.0),
-                ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Row(
+            
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                   decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                            10.0,
+                          ),
+                          color: Colors.grey,
+                        ),
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      '180',
+                      'ارتفاع',
                       style: TextStyle(fontSize: 25.0),
                     ),
-                    Text(
-                      'cm',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20.0),
+                    SizedBox(
+                      height: 15.0,
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: [
+                        Text(
+                          '180',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                        Text(
+                          'سنتيمتر',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                      ],
+                    ),
+       Slider(
+         value: 120.0, 
+    max: 220.0,
+    min: 80.0,
+         onChanged: (value) {
+         print(value.round());}),
                   ],
-                )
-              ],
+                ),
+              ),
             ),
           ),
+          
           ///////////////////////////////////
           Expanded(
-              child: Container(
-            width: double.infinity,
-            color: Colors.green,
-          )),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  children: [
+
+                            Expanded( 
+                              child:Container(
+                      
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                              10.0,
+                            ),
+                            color: Colors.grey,
+                          ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+                Text(
+                          'ارتفاع',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                           Text(
+                          '180',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                        Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+
+                          children: [
+                            FloatingActionButton(
+                              onPressed:() {},
+                              mini: true,
+                              child: Icon(
+                           
+
+                                Icons.remove,
+                              ),
+                              
+                              
+                              ),
+                                  SizedBox(width: 20.0,),
+                                     FloatingActionButton(
+                              onPressed:() {},
+                                                        mini: true,
+
+                              child: Icon(
+                                Icons.add,
+                              ),
+                               ),
+                            ],)
+        ],
+          ),
+                    ),
+                     ),
+                     SizedBox(
+                       width: 20.0,
+                     ),
+                     Expanded( 
+                              child:Container(
+                      
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                              10.0,
+                            ),
+                            color: Colors.grey,
+                          ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+                Text(
+                          'ارتفاع',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                           Text(
+                          '180',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                        Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+
+                          children: [
+                            FloatingActionButton(
+                              onPressed:() {},
+                              mini: true,
+                              child: Icon(
+                           
+
+                                Icons.remove,
+                              ),
+                              
+                              
+                              ),
+                              SizedBox(width: 20.0,),
+                                     FloatingActionButton(
+                              onPressed:() {},
+                                                        mini: true,
+
+                              child: Icon(
+                                Icons.add,
+                              ),
+                               ),
+                            ],)
+        ],
+          ),
+                    ),
+                     ),
+                  ],
+                ),
+              )),
+
           //////////////////////////////////
 
           Container(
@@ -137,4 +267,6 @@ class _BmiScreenState extends State<BmiScreen> {
       ),
     );
   }
+
+  silder() {}
 }
