@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BmiScreen extends StatefulWidget {
-
   @override
   _BmiScreenState createState() => _BmiScreenState();
 }
@@ -17,6 +16,7 @@ class _BmiScreenState extends State<BmiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text("Bmi Calcuator"),
       ),
@@ -38,7 +38,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
-                              10.0,
+                             100.0,
                             ),
                             color: !isMale ? Colors.blue : Colors.grey[400],
                           ),
@@ -47,8 +47,8 @@ class _BmiScreenState extends State<BmiScreen> {
                             children: [
                               Image(
                                 image: AssetImage('assets/images/female.png'),
-                                height: 90.0,
-                                width: 90.0,
+                                height: 50.0,
+                                width: 50.0,
                               ),
                               SizedBox(
                                 height: 15.0,
@@ -179,8 +179,7 @@ class _BmiScreenState extends State<BmiScreen> {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
-                children:
-                [
+                children: [
                   Expanded(
                     child: Container(
                       child: Column(
